@@ -1,2 +1,2 @@
 # SimpleExamples
-Test project for new ideas.
+A test project for new ideas.
