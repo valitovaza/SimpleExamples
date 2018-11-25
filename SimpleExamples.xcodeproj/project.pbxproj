@@ -22,9 +22,9 @@
 		56C1BB3C21A595DC00B5B529 /* ContentFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB3B21A595DC00B5B529 /* ContentFetcherTests.swift */; };
 		56C1BB4521A5991600B5B529 /* ContentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4421A5991600B5B529 /* ContentFetcher.swift */; };
 		56C1BB4721A5999000B5B529 /* ContentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4421A5991600B5B529 /* ContentFetcher.swift */; };
-		56C1BB4A21A59B7200B5B529 /* AsyncLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4821A59B7200B5B529 /* AsyncLoaderTests.swift */; };
-		56C1BB4C21A59B8800B5B529 /* AsyncLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4B21A59B8800B5B529 /* AsyncLoader.swift */; };
-		56C1BB4D21A59B8800B5B529 /* AsyncLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4B21A59B8800B5B529 /* AsyncLoader.swift */; };
+		56C1BB4A21A59B7200B5B529 /* AsyncProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4821A59B7200B5B529 /* AsyncProcessorTests.swift */; };
+		56C1BB4C21A59B8800B5B529 /* AsyncProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4B21A59B8800B5B529 /* AsyncProcessor.swift */; };
+		56C1BB4D21A59B8800B5B529 /* AsyncProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4B21A59B8800B5B529 /* AsyncProcessor.swift */; };
 		56C1BB5121A5B53B00B5B529 /* CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5021A5B53B00B5B529 /* CounterTests.swift */; };
 		56C1BB5321A5B57900B5B529 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5221A5B57900B5B529 /* Counter.swift */; };
 		56C1BB5421A5B6A400B5B529 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5221A5B57900B5B529 /* Counter.swift */; };
@@ -91,8 +91,8 @@
 		56C1BB3B21A595DC00B5B529 /* ContentFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentFetcherTests.swift; sourceTree = "<group>"; };
 		56C1BB3D21A595DC00B5B529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56C1BB4421A5991600B5B529 /* ContentFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentFetcher.swift; sourceTree = "<group>"; };
-		56C1BB4821A59B7200B5B529 /* AsyncLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLoaderTests.swift; sourceTree = "<group>"; };
-		56C1BB4B21A59B8800B5B529 /* AsyncLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLoader.swift; sourceTree = "<group>"; };
+		56C1BB4821A59B7200B5B529 /* AsyncProcessorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncProcessorTests.swift; sourceTree = "<group>"; };
+		56C1BB4B21A59B8800B5B529 /* AsyncProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncProcessor.swift; sourceTree = "<group>"; };
 		56C1BB5021A5B53B00B5B529 /* CounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTests.swift; sourceTree = "<group>"; };
 		56C1BB5221A5B57900B5B529 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		56C1BB5521A5BCC100B5B529 /* CounterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterPresenter.swift; sourceTree = "<group>"; };
@@ -136,6 +136,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		560AD27721AAF0CD00C19CA1 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				56C1BB5221A5B57900B5B529 /* Counter.swift */,
+				56C1BB5521A5BCC100B5B529 /* CounterPresenter.swift */,
+				56C1BB5A21A5C0D500B5B529 /* CounterRepository.swift */,
+				56C1BB6521A5D7FA00B5B529 /* ErrorHandlingCounter.swift */,
+				56C1BB6A21A5E14C00B5B529 /* CounterViewEventHandler.swift */,
+				56C1BB7421A5EA7200B5B529 /* ContentFetchAdapters.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		560AD27821AAF0E100C19CA1 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				56C1BB5021A5B53B00B5B529 /* CounterTests.swift */,
+				56C1BB5821A5BCEC00B5B529 /* CounterPresenterTests.swift */,
+				56C1BB5D21A5C0EA00B5B529 /* CounterRepositoryTests.swift */,
+				56C1BB6321A5D7B300B5B529 /* ErrorHandlingCounterTests.swift */,
+				56C1BB6821A5E12600B5B529 /* CounterViewEventHandlerTests.swift */,
+				56C1BB7221A5E79E00B5B529 /* ContentFetchAdaptersTests.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
 		560D3D5921A719DE00694B3F /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,7 +222,7 @@
 			children = (
 				56C1BB4E21A5A3D100B5B529 /* Examples */,
 				56C1BB4421A5991600B5B529 /* ContentFetcher.swift */,
-				56C1BB4B21A59B8800B5B529 /* AsyncLoader.swift */,
+				56C1BB4B21A59B8800B5B529 /* AsyncProcessor.swift */,
 				56C1BB2A21A595BB00B5B529 /* Core.h */,
 				56C1BB2B21A595BB00B5B529 /* Info.plist */,
 			);
@@ -208,7 +234,7 @@
 			children = (
 				56C1BB4F21A5A3DF00B5B529 /* Examples */,
 				56C1BB3B21A595DC00B5B529 /* ContentFetcherTests.swift */,
-				56C1BB4821A59B7200B5B529 /* AsyncLoaderTests.swift */,
+				56C1BB4821A59B7200B5B529 /* AsyncProcessorTests.swift */,
 				56C1BB3D21A595DC00B5B529 /* Info.plist */,
 			);
 			path = CoreTests;
@@ -217,12 +243,7 @@
 		56C1BB4E21A5A3D100B5B529 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				56C1BB5221A5B57900B5B529 /* Counter.swift */,
-				56C1BB5521A5BCC100B5B529 /* CounterPresenter.swift */,
-				56C1BB5A21A5C0D500B5B529 /* CounterRepository.swift */,
-				56C1BB6521A5D7FA00B5B529 /* ErrorHandlingCounter.swift */,
-				56C1BB6A21A5E14C00B5B529 /* CounterViewEventHandler.swift */,
-				56C1BB7421A5EA7200B5B529 /* ContentFetchAdapters.swift */,
+				560AD27721AAF0CD00C19CA1 /* Counter */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -231,12 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				560D3D5921A719DE00694B3F /* Common */,
-				56C1BB5021A5B53B00B5B529 /* CounterTests.swift */,
-				56C1BB5821A5BCEC00B5B529 /* CounterPresenterTests.swift */,
-				56C1BB5D21A5C0EA00B5B529 /* CounterRepositoryTests.swift */,
-				56C1BB6321A5D7B300B5B529 /* ErrorHandlingCounterTests.swift */,
-				56C1BB6821A5E12600B5B529 /* CounterViewEventHandlerTests.swift */,
-				56C1BB7221A5E79E00B5B529 /* ContentFetchAdaptersTests.swift */,
+				560AD27821AAF0E100C19CA1 /* Counter */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -409,7 +425,7 @@
 				56C1BB4521A5991600B5B529 /* ContentFetcher.swift in Sources */,
 				56C1BB6B21A5E14C00B5B529 /* CounterViewEventHandler.swift in Sources */,
 				56C1BB5621A5BCC100B5B529 /* CounterPresenter.swift in Sources */,
-				56C1BB4C21A59B8800B5B529 /* AsyncLoader.swift in Sources */,
+				56C1BB4C21A59B8800B5B529 /* AsyncProcessor.swift in Sources */,
 				56C1BB6621A5D7FA00B5B529 /* ErrorHandlingCounter.swift in Sources */,
 				56C1BB5B21A5C0D500B5B529 /* CounterRepository.swift in Sources */,
 				56C1BB5321A5B57900B5B529 /* Counter.swift in Sources */,
@@ -425,14 +441,14 @@
 				56C1BB6C21A5E14C00B5B529 /* CounterViewEventHandler.swift in Sources */,
 				56C1BB5921A5BCEC00B5B529 /* CounterPresenterTests.swift in Sources */,
 				56C1BB6921A5E12600B5B529 /* CounterViewEventHandlerTests.swift in Sources */,
-				56C1BB4D21A59B8800B5B529 /* AsyncLoader.swift in Sources */,
+				56C1BB4D21A59B8800B5B529 /* AsyncProcessor.swift in Sources */,
 				56C1BB7321A5E79E00B5B529 /* ContentFetchAdaptersTests.swift in Sources */,
 				56C1BB6721A5D7FA00B5B529 /* ErrorHandlingCounter.swift in Sources */,
 				56C1BB6421A5D7B300B5B529 /* ErrorHandlingCounterTests.swift in Sources */,
 				56C1BB5721A5BCC400B5B529 /* CounterPresenter.swift in Sources */,
 				56C1BB5E21A5C0EA00B5B529 /* CounterRepositoryTests.swift in Sources */,
 				56C1BB5421A5B6A400B5B529 /* Counter.swift in Sources */,
-				56C1BB4A21A59B7200B5B529 /* AsyncLoaderTests.swift in Sources */,
+				56C1BB4A21A59B7200B5B529 /* AsyncProcessorTests.swift in Sources */,
 				56C1BB3C21A595DC00B5B529 /* ContentFetcherTests.swift in Sources */,
 				56C1BB6221A5CFA600B5B529 /* CounterRepository.swift in Sources */,
 				560D3D5B21A719E900694B3F /* CounterViewSpy.swift in Sources */,
