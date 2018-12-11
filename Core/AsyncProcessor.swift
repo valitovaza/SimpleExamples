@@ -13,7 +13,7 @@ public protocol AsyncTaskWaiter {
 public class AsyncProcessorImpl<Performer: AsyncTaskPerformer, TaskWaiter: AsyncTaskWaiter> where Performer.TaskContent == TaskWaiter.TaskContent {
     private let performer: Performer
     private let taskWaiter: TaskWaiter
-    init(_ performer: Performer, _ taskWaiter: TaskWaiter) {
+    public init(_ performer: Performer, _ taskWaiter: TaskWaiter) {
         self.performer = performer
         self.taskWaiter = taskWaiter
     }

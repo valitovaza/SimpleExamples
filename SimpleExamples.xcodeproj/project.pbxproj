@@ -7,7 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560AD27B21AAFE2F00C19CA1 /* LoginCheckerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD27A21AAFE2F00C19CA1 /* LoginCheckerPresenterTests.swift */; };
+		560AD27E21AAFE7000C19CA1 /* LoginCheckerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD27D21AAFE7000C19CA1 /* LoginCheckerPresenter.swift */; };
+		560AD27F21AAFE7000C19CA1 /* LoginCheckerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD27D21AAFE7000C19CA1 /* LoginCheckerPresenter.swift */; };
+		560AD28121AB035400C19CA1 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD28021AB035400C19CA1 /* Stubs.swift */; };
+		560AD29321AB0CF300C19CA1 /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD29221AB0CF300C19CA1 /* NavigatorTests.swift */; };
+		560AD29521AB0D2E00C19CA1 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD29421AB0D2E00C19CA1 /* Navigator.swift */; };
 		560D3D5B21A719E900694B3F /* CounterViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D3D5A21A719E900694B3F /* CounterViewSpy.swift */; };
+		5627942C21BE771100EB9D76 /* ContainerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627942B21BE771100EB9D76 /* ContainerViewControllerTests.swift */; };
+		5627942E21BE775400EB9D76 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627942D21BE775400EB9D76 /* ContainerViewController.swift */; };
+		5627943021BE781800EB9D76 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5627942F21BE781800EB9D76 /* Common.storyboard */; };
+		5627943721BE843A00EB9D76 /* MainRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627943621BE843A00EB9D76 /* MainRouterTests.swift */; };
+		5627943921BE84AC00EB9D76 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627943821BE84AC00EB9D76 /* MainRouter.swift */; };
+		5627943D21BE8F6300EB9D76 /* MainViewEventHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627943C21BE8F6300EB9D76 /* MainViewEventHandlerTests.swift */; };
+		5627943F21BE8F9C00EB9D76 /* MainViewEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627943E21BE8F9C00EB9D76 /* MainViewEventHandler.swift */; };
+		5627944021BE8F9C00EB9D76 /* MainViewEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627943E21BE8F9C00EB9D76 /* MainViewEventHandler.swift */; };
+		5627944221BE928D00EB9D76 /* VCStoryboardInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627944121BE928D00EB9D76 /* VCStoryboardInitializer.swift */; };
+		5627944421BE958400EB9D76 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5627944321BE958400EB9D76 /* Login.storyboard */; };
+		5627944621BE95AD00EB9D76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627944521BE95AD00EB9D76 /* LoginViewController.swift */; };
+		56281A2321BFB1D200BC0DE9 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A2221BFB1D200BC0DE9 /* ContentViewController.swift */; };
+		56281A2521BFB26200BC0DE9 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A2421BFB26200BC0DE9 /* LoadingViewController.swift */; };
+		56281A2721BFF7BE00BC0DE9 /* MainDependenciesRegistrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A2621BFF7BE00BC0DE9 /* MainDependenciesRegistrator.swift */; };
+		56281A2A21BFF85300BC0DE9 /* CommonDependenciesRegistrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A2921BFF85200BC0DE9 /* CommonDependenciesRegistrator.swift */; };
+		56281A2C21BFF8A500BC0DE9 /* CounterDependenciesRegistrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A2B21BFF8A500BC0DE9 /* CounterDependenciesRegistrator.swift */; };
+		56281A2E21BFFA6F00BC0DE9 /* ErrorHandlingNavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A2D21BFFA6F00BC0DE9 /* ErrorHandlingNavigatorTests.swift */; };
+		56281A3021BFFAA800BC0DE9 /* ErrorHandlingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A2F21BFFAA800BC0DE9 /* ErrorHandlingNavigator.swift */; };
+		56281A3221BFFB6100BC0DE9 /* Loggers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A3121BFFB6100BC0DE9 /* Loggers.swift */; };
 		56C1BB0921A5951100B5B529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB0821A5951100B5B529 /* AppDelegate.swift */; };
 		56C1BB0E21A5951100B5B529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56C1BB0C21A5951100B5B529 /* Main.storyboard */; };
 		56C1BB1021A5951200B5B529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C1BB0F21A5951200B5B529 /* Assets.xcassets */; };
@@ -49,6 +74,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		560AD28B21AB0C6700C19CA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56C1BAFD21A5951100B5B529 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56C1BB0421A5951100B5B529;
+			remoteInfo = SimpleExamples;
+		};
 		56C1BB2D21A595BB00B5B529 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 56C1BAFD21A5951100B5B529 /* Project object */;
@@ -73,7 +105,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		560AD27A21AAFE2F00C19CA1 /* LoginCheckerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheckerPresenterTests.swift; sourceTree = "<group>"; };
+		560AD27D21AAFE7000C19CA1 /* LoginCheckerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCheckerPresenter.swift; sourceTree = "<group>"; };
+		560AD28021AB035400C19CA1 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
+		560AD28621AB0C6700C19CA1 /* SimpleExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		560AD28A21AB0C6700C19CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		560AD29221AB0CF300C19CA1 /* NavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTests.swift; sourceTree = "<group>"; };
+		560AD29421AB0D2E00C19CA1 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		560D3D5A21A719E900694B3F /* CounterViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewSpy.swift; sourceTree = "<group>"; };
+		5627942B21BE771100EB9D76 /* ContainerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerTests.swift; sourceTree = "<group>"; };
+		5627942D21BE775400EB9D76 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		5627942F21BE781800EB9D76 /* Common.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
+		5627943621BE843A00EB9D76 /* MainRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterTests.swift; sourceTree = "<group>"; };
+		5627943821BE84AC00EB9D76 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		5627943C21BE8F6300EB9D76 /* MainViewEventHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewEventHandlerTests.swift; sourceTree = "<group>"; };
+		5627943E21BE8F9C00EB9D76 /* MainViewEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewEventHandler.swift; sourceTree = "<group>"; };
+		5627944121BE928D00EB9D76 /* VCStoryboardInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCStoryboardInitializer.swift; sourceTree = "<group>"; };
+		5627944321BE958400EB9D76 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		5627944521BE95AD00EB9D76 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		56281A2221BFB1D200BC0DE9 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		56281A2421BFB26200BC0DE9 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		56281A2621BFF7BE00BC0DE9 /* MainDependenciesRegistrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDependenciesRegistrator.swift; sourceTree = "<group>"; };
+		56281A2921BFF85200BC0DE9 /* CommonDependenciesRegistrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDependenciesRegistrator.swift; sourceTree = "<group>"; };
+		56281A2B21BFF8A500BC0DE9 /* CounterDependenciesRegistrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDependenciesRegistrator.swift; sourceTree = "<group>"; };
+		56281A2D21BFFA6F00BC0DE9 /* ErrorHandlingNavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingNavigatorTests.swift; sourceTree = "<group>"; };
+		56281A2F21BFFAA800BC0DE9 /* ErrorHandlingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingNavigator.swift; sourceTree = "<group>"; };
+		56281A3121BFFB6100BC0DE9 /* Loggers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggers.swift; sourceTree = "<group>"; };
 		56C1BB0521A5951100B5B529 /* SimpleExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C1BB0821A5951100B5B529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56C1BB0D21A5951100B5B529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +168,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		560AD28321AB0C6700C19CA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		56C1BB0221A5951100B5B529 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +226,55 @@
 			path = Counter;
 			sourceTree = "<group>";
 		};
+		560AD27921AAFD7900C19CA1 /* LoginChecker */ = {
+			isa = PBXGroup;
+			children = (
+				560AD27A21AAFE2F00C19CA1 /* LoginCheckerPresenterTests.swift */,
+			);
+			path = LoginChecker;
+			sourceTree = "<group>";
+		};
+		560AD27C21AAFE5C00C19CA1 /* LoginChecker */ = {
+			isa = PBXGroup;
+			children = (
+				560AD27D21AAFE7000C19CA1 /* LoginCheckerPresenter.swift */,
+			);
+			path = LoginChecker;
+			sourceTree = "<group>";
+		};
+		560AD28721AB0C6700C19CA1 /* SimpleExamplesTests */ = {
+			isa = PBXGroup;
+			children = (
+				560AD29021AB0C7D00C19CA1 /* Common */,
+				5627943621BE843A00EB9D76 /* MainRouterTests.swift */,
+				560AD28A21AB0C6700C19CA1 /* Info.plist */,
+			);
+			path = SimpleExamplesTests;
+			sourceTree = "<group>";
+		};
+		560AD29021AB0C7D00C19CA1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				560AD29221AB0CF300C19CA1 /* NavigatorTests.swift */,
+				56281A2D21BFFA6F00BC0DE9 /* ErrorHandlingNavigatorTests.swift */,
+				5627942B21BE771100EB9D76 /* ContainerViewControllerTests.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		560AD29121AB0C8500C19CA1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				560AD29421AB0D2E00C19CA1 /* Navigator.swift */,
+				56281A2F21BFFAA800BC0DE9 /* ErrorHandlingNavigator.swift */,
+				56281A3121BFFB6100BC0DE9 /* Loggers.swift */,
+				5627942D21BE775400EB9D76 /* ContainerViewController.swift */,
+				5627942F21BE781800EB9D76 /* Common.storyboard */,
+				5627944121BE928D00EB9D76 /* VCStoryboardInitializer.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		560D3D5921A719DE00694B3F /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,10 +283,38 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		5627943A21BE8F2900EB9D76 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5627943E21BE8F9C00EB9D76 /* MainViewEventHandler.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5627943B21BE8F3500EB9D76 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5627943C21BE8F6300EB9D76 /* MainViewEventHandlerTests.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		56281A2821BFF82A00BC0DE9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				56C1BB1D21A5956F00B5B529 /* DependencyContainer.swift */,
+				56C1BB1F21A5956F00B5B529 /* DependencyConfigurator.swift */,
+				56C1BB1E21A5956F00B5B529 /* Dependencies.swift */,
+				56F5F24121A8526C00EECE2F /* WeakBox.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		56C1BAFC21A5951100B5B529 = {
 			isa = PBXGroup;
 			children = (
 				56C1BB0721A5951100B5B529 /* SimpleExamples */,
+				560AD28721AB0C6700C19CA1 /* SimpleExamplesTests */,
 				56C1BB2921A595BB00B5B529 /* Core */,
 				56C1BB3A21A595DC00B5B529 /* CoreTests */,
 				56C1BB0621A5951100B5B529 /* Products */,
@@ -186,6 +327,7 @@
 				56C1BB0521A5951100B5B529 /* SimpleExamples.app */,
 				56C1BB2821A595BB00B5B529 /* Core.framework */,
 				56C1BB3921A595DC00B5B529 /* CoreTests.xctest */,
+				560AD28621AB0C6700C19CA1 /* SimpleExamplesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,8 +336,10 @@
 			isa = PBXGroup;
 			children = (
 				56C1BB1C21A5956F00B5B529 /* DependencyConfiguration */,
+				560AD29121AB0C8500C19CA1 /* Common */,
 				56C1BB0821A5951100B5B529 /* AppDelegate.swift */,
 				56C1BB1A21A5953C00B5B529 /* MainViewController.swift */,
+				5627943821BE84AC00EB9D76 /* MainRouter.swift */,
 				56C1BB0C21A5951100B5B529 /* Main.storyboard */,
 				56C1BB5F21A5C96D00B5B529 /* Examples */,
 				56C1BB0F21A5951200B5B529 /* Assets.xcassets */,
@@ -208,10 +352,11 @@
 		56C1BB1C21A5956F00B5B529 /* DependencyConfiguration */ = {
 			isa = PBXGroup;
 			children = (
-				56C1BB1D21A5956F00B5B529 /* DependencyContainer.swift */,
-				56C1BB1F21A5956F00B5B529 /* DependencyConfigurator.swift */,
-				56C1BB1E21A5956F00B5B529 /* Dependencies.swift */,
-				56F5F24121A8526C00EECE2F /* WeakBox.swift */,
+				56281A2821BFF82A00BC0DE9 /* Utils */,
+				56281A2621BFF7BE00BC0DE9 /* MainDependenciesRegistrator.swift */,
+				56281A2921BFF85200BC0DE9 /* CommonDependenciesRegistrator.swift */,
+				56281A2B21BFF8A500BC0DE9 /* CounterDependenciesRegistrator.swift */,
+				560AD28021AB035400C19CA1 /* Stubs.swift */,
 				56F5F24321A85FC100EECE2F /* Constants.swift */,
 			);
 			path = DependencyConfiguration;
@@ -243,7 +388,9 @@
 		56C1BB4E21A5A3D100B5B529 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				5627943A21BE8F2900EB9D76 /* Main */,
 				560AD27721AAF0CD00C19CA1 /* Counter */,
+				560AD27C21AAFE5C00C19CA1 /* LoginChecker */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -252,7 +399,9 @@
 			isa = PBXGroup;
 			children = (
 				560D3D5921A719DE00694B3F /* Common */,
+				5627943B21BE8F3500EB9D76 /* Main */,
 				560AD27821AAF0E100C19CA1 /* Counter */,
+				560AD27921AAFD7900C19CA1 /* LoginChecker */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -261,6 +410,10 @@
 			isa = PBXGroup;
 			children = (
 				56C1BB6021A5C98600B5B529 /* CounterViewController.swift */,
+				5627944321BE958400EB9D76 /* Login.storyboard */,
+				5627944521BE95AD00EB9D76 /* LoginViewController.swift */,
+				56281A2221BFB1D200BC0DE9 /* ContentViewController.swift */,
+				56281A2421BFB26200BC0DE9 /* LoadingViewController.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -279,6 +432,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		560AD28521AB0C6700C19CA1 /* SimpleExamplesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 560AD28D21AB0C6700C19CA1 /* Build configuration list for PBXNativeTarget "SimpleExamplesTests" */;
+			buildPhases = (
+				560AD28221AB0C6700C19CA1 /* Sources */,
+				560AD28321AB0C6700C19CA1 /* Frameworks */,
+				560AD28421AB0C6700C19CA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				560AD28C21AB0C6700C19CA1 /* PBXTargetDependency */,
+			);
+			name = SimpleExamplesTests;
+			productName = SimpleExamplesTests;
+			productReference = 560AD28621AB0C6700C19CA1 /* SimpleExamplesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		56C1BB0421A5951100B5B529 /* SimpleExamples */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56C1BB1721A5951200B5B529 /* Build configuration list for PBXNativeTarget "SimpleExamples" */;
@@ -343,6 +514,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = AzamatValitov;
 				TargetAttributes = {
+					560AD28521AB0C6700C19CA1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 56C1BB0421A5951100B5B529;
+					};
 					56C1BB0421A5951100B5B529 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -369,6 +544,7 @@
 			projectRoot = "";
 			targets = (
 				56C1BB0421A5951100B5B529 /* SimpleExamples */,
+				560AD28521AB0C6700C19CA1 /* SimpleExamplesTests */,
 				56C1BB2721A595BB00B5B529 /* Core */,
 				56C1BB3821A595DC00B5B529 /* CoreTests */,
 			);
@@ -376,12 +552,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		560AD28421AB0C6700C19CA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		56C1BB0321A5951100B5B529 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				56C1BB1321A5951200B5B529 /* LaunchScreen.storyboard in Resources */,
+				5627943021BE781800EB9D76 /* Common.storyboard in Resources */,
 				56C1BB1021A5951200B5B529 /* Assets.xcassets in Resources */,
+				5627944421BE958400EB9D76 /* Login.storyboard in Resources */,
 				56C1BB0E21A5951100B5B529 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,16 +588,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		560AD28221AB0C6700C19CA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5627943721BE843A00EB9D76 /* MainRouterTests.swift in Sources */,
+				5627942C21BE771100EB9D76 /* ContainerViewControllerTests.swift in Sources */,
+				560AD29321AB0CF300C19CA1 /* NavigatorTests.swift in Sources */,
+				56281A2E21BFFA6F00BC0DE9 /* ErrorHandlingNavigatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		56C1BB0121A5951100B5B529 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5627944621BE95AD00EB9D76 /* LoginViewController.swift in Sources */,
+				560AD28121AB035400C19CA1 /* Stubs.swift in Sources */,
+				56281A2A21BFF85300BC0DE9 /* CommonDependenciesRegistrator.swift in Sources */,
+				560AD29521AB0D2E00C19CA1 /* Navigator.swift in Sources */,
+				56281A2521BFB26200BC0DE9 /* LoadingViewController.swift in Sources */,
 				56C1BB2221A5956F00B5B529 /* DependencyConfigurator.swift in Sources */,
+				56281A3221BFFB6100BC0DE9 /* Loggers.swift in Sources */,
+				5627942E21BE775400EB9D76 /* ContainerViewController.swift in Sources */,
 				56C1BB2121A5956F00B5B529 /* Dependencies.swift in Sources */,
+				56281A2C21BFF8A500BC0DE9 /* CounterDependenciesRegistrator.swift in Sources */,
+				56281A3021BFFAA800BC0DE9 /* ErrorHandlingNavigator.swift in Sources */,
+				5627944221BE928D00EB9D76 /* VCStoryboardInitializer.swift in Sources */,
+				5627943921BE84AC00EB9D76 /* MainRouter.swift in Sources */,
 				56C1BB0921A5951100B5B529 /* AppDelegate.swift in Sources */,
 				56C1BB6121A5C98600B5B529 /* CounterViewController.swift in Sources */,
+				56281A2321BFB1D200BC0DE9 /* ContentViewController.swift in Sources */,
 				56C1BB2021A5956F00B5B529 /* DependencyContainer.swift in Sources */,
 				56C1BB1B21A5953C00B5B529 /* MainViewController.swift in Sources */,
+				56281A2721BFF7BE00BC0DE9 /* MainDependenciesRegistrator.swift in Sources */,
 				56F5F24221A8526C00EECE2F /* WeakBox.swift in Sources */,
 				56F5F24421A85FC100EECE2F /* Constants.swift in Sources */,
 			);
@@ -425,7 +634,9 @@
 				56C1BB4521A5991600B5B529 /* ContentFetcher.swift in Sources */,
 				56C1BB6B21A5E14C00B5B529 /* CounterViewEventHandler.swift in Sources */,
 				56C1BB5621A5BCC100B5B529 /* CounterPresenter.swift in Sources */,
+				5627943F21BE8F9C00EB9D76 /* MainViewEventHandler.swift in Sources */,
 				56C1BB4C21A59B8800B5B529 /* AsyncProcessor.swift in Sources */,
+				560AD27E21AAFE7000C19CA1 /* LoginCheckerPresenter.swift in Sources */,
 				56C1BB6621A5D7FA00B5B529 /* ErrorHandlingCounter.swift in Sources */,
 				56C1BB5B21A5C0D500B5B529 /* CounterRepository.swift in Sources */,
 				56C1BB5321A5B57900B5B529 /* Counter.swift in Sources */,
@@ -441,6 +652,7 @@
 				56C1BB6C21A5E14C00B5B529 /* CounterViewEventHandler.swift in Sources */,
 				56C1BB5921A5BCEC00B5B529 /* CounterPresenterTests.swift in Sources */,
 				56C1BB6921A5E12600B5B529 /* CounterViewEventHandlerTests.swift in Sources */,
+				5627944021BE8F9C00EB9D76 /* MainViewEventHandler.swift in Sources */,
 				56C1BB4D21A59B8800B5B529 /* AsyncProcessor.swift in Sources */,
 				56C1BB7321A5E79E00B5B529 /* ContentFetchAdaptersTests.swift in Sources */,
 				56C1BB6721A5D7FA00B5B529 /* ErrorHandlingCounter.swift in Sources */,
@@ -454,12 +666,20 @@
 				560D3D5B21A719E900694B3F /* CounterViewSpy.swift in Sources */,
 				56C1BB5121A5B53B00B5B529 /* CounterTests.swift in Sources */,
 				56C1BB7621A5EA7200B5B529 /* ContentFetchAdapters.swift in Sources */,
+				5627943D21BE8F6300EB9D76 /* MainViewEventHandlerTests.swift in Sources */,
+				560AD27F21AAFE7000C19CA1 /* LoginCheckerPresenter.swift in Sources */,
+				560AD27B21AAFE2F00C19CA1 /* LoginCheckerPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		560AD28C21AB0C6700C19CA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56C1BB0421A5951100B5B529 /* SimpleExamples */;
+			targetProxy = 560AD28B21AB0C6700C19CA1 /* PBXContainerItemProxy */;
+		};
 		56C1BB2E21A595BB00B5B529 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 56C1BB2721A595BB00B5B529 /* Core */;
@@ -487,6 +707,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		560AD28E21AB0C6700C19CA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpleExamplesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AzamatValitov.SimpleExamplesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleExamples.app/SimpleExamples";
+			};
+			name = Debug;
+		};
+		560AD28F21AB0C6700C19CA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SimpleExamplesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AzamatValitov.SimpleExamplesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleExamples.app/SimpleExamples";
+			};
+			name = Release;
+		};
 		56C1BB1521A5951200B5B529 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -743,6 +1001,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		560AD28D21AB0C6700C19CA1 /* Build configuration list for PBXNativeTarget "SimpleExamplesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				560AD28E21AB0C6700C19CA1 /* Debug */,
+				560AD28F21AB0C6700C19CA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		56C1BB0021A5951100B5B529 /* Build configuration list for PBXProject "SimpleExamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
