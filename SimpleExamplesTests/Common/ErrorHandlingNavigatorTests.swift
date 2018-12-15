@@ -40,7 +40,7 @@ class ErrorHandlingNavigatorTests: XCTestCase {
         let vc = UIViewController()
         sut.push(viewController: vc, animated: true)
         XCTAssertEqual(navigator.pushCallCount, 1)
-        XCTAssertEqual(navigator.pushVc, vc)
+        XCTAssertEqual(navigator.pushedVc, vc)
         XCTAssertEqual(navigator.pushAnimatedFlag, true)
     }
     
@@ -88,6 +88,36 @@ class ErrorHandlingNavigatorTests: XCTestCase {
         XCTAssertEqual(logger.loggedError as? NavigatorError,
                        NavigatorError.cantNavigateBack)
     }
+    
+    func testAddContentScreenInvokesNavigatorsAddContentScreen() {
+        let vc = UIViewController()
+        sut.add(contentScreen: vc)
+        XCTAssertEqual(navigator.addContentScreenCallCount, 1)
+        XCTAssertEqual(navigator.addedVc, vc)
+        XCTAssertEqual(logger.logCallCount, 0)
+    }
+    
+    func testAddContentWithErrorInvokesLog() {
+        navigator.nextErrors = [.cantPresentAlreadyPresentedViewController]
+        sut.add(contentScreen: UIViewController())
+        XCTAssertEqual(logger.logCallCount, 1)
+        XCTAssertEqual(logger.loggedError as? NavigatorError,
+                       NavigatorError.cantPresentAlreadyPresentedViewController)
+    }
+    
+    func testRemoveContentScreenInvokesNavigatorsRemoveContent() {
+        sut.removeLastContentScreen()
+        XCTAssertEqual(navigator.removeLastContentScreenCallCount, 1)
+        XCTAssertEqual(logger.logCallCount, 0)
+    }
+    
+    func testRemoveContentScreenWithErrorInvokesLog() {
+        navigator.nextErrors = [.cantNavigateBack]
+        sut.removeLastContentScreen()
+        XCTAssertEqual(logger.logCallCount, 1)
+        XCTAssertEqual(logger.loggedError as? NavigatorError,
+                       NavigatorError.cantNavigateBack)
+    }
 }
 extension ErrorHandlingNavigatorTests {
     class ErrorLoggerSpy: ErrorLogger {
@@ -98,43 +128,6 @@ extension ErrorHandlingNavigatorTests {
             logCallCount += 1
             loggedError = error
             interceptionCallback?()
-        }
-    }
-    class NavigatorMock: Navigator {
-        
-        var nextErrors: [NavigatorError] = []
-        
-        var openCallCount = 0
-        var opennedVc: UIViewController?
-        var openAnimatedFlag: Bool?
-        func open(viewController: UIViewController, animated: Bool) throws {
-            try checkThrowableError()
-            openCallCount += 1
-            opennedVc = viewController
-            openAnimatedFlag = animated
-        }
-        private func checkThrowableError() throws {
-            if nextErrors.count > 0 {
-                throw nextErrors.remove(at: 0)
-            }
-        }
-        
-        var pushCallCount = 0
-        var pushVc: UIViewController?
-        var pushAnimatedFlag: Bool?
-        func push(viewController: UIViewController, animated: Bool) throws {
-            try checkThrowableError()
-            pushCallCount += 1
-            pushVc = viewController
-            pushAnimatedFlag = animated
-        }
-        
-        var backCallCount = 0
-        var backAnimatedFlag: Bool?
-        func back(animated: Bool) throws {
-            try checkThrowableError()
-            backCallCount += 1
-            backAnimatedFlag = animated
         }
     }
 }

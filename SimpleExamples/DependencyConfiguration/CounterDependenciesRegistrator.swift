@@ -19,9 +19,7 @@ enum CounterDependenciesRegistrator {
         
         //CounterPresenter
         DependencyContainer.register(CounterPresenter.self, {
-            Dependencies.createSingleWeak(CounterPresenterImpl.self, {
-                CounterPresenterImpl(DependencyContainer.resolve(CounterView.self))
-            })
+            CounterPresenterImpl(DependencyContainer.resolve(CounterView.self))
         })
         
         //ErrorHandlingCounter

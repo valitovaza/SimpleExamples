@@ -8,9 +8,9 @@ class ErrorPrinterStub: ErrorHandler {
 
 class LoginStateHolderStub: AsyncTaskPerformer {
     func performAsyncTask(_ completion: @escaping (AppStartState)->()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            //completion(.authorized)
-            completion(.notAuthorized)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            completion(.authorized)
+            //completion(.notAuthorized)
         }
     }
 }

@@ -4,7 +4,6 @@ import XCTest
 class MainRouterTests: XCTestCase {
     
     private var sut: MainRouter!
-    private var screenSwitcher: ContainerScreenSwitcherSpy!
     private var navigator: ErrorHandlingNavigatorSpy!
     
     private let loadingVc = UIViewController()
@@ -12,84 +11,99 @@ class MainRouterTests: XCTestCase {
     private let loginVC = UIViewController()
     
     override func setUp() {
-        screenSwitcher = ContainerScreenSwitcherSpy()
         navigator = ErrorHandlingNavigatorSpy()
-        sut = MainRouter(screenSwitcher, navigator,
+        sut = MainRouter(navigator,
                          {self.loadingVc},
                          {self.contentVc},
                          {self.loginVC})
     }
     
     override func tearDown() {
-        screenSwitcher = nil
         navigator = nil
         sut = nil
     }
     
     func testOpenLoadingScreenInvokesSetContent() {
         sut.openLoadingScreen()
-        XCTAssertEqual(screenSwitcher.setContentCallCount, 1)
-        XCTAssertEqual(screenSwitcher.setViewController, loadingVc)
+        XCTAssertEqual(navigator.addContentScreenCallCount, 1)
+        XCTAssertEqual(navigator.addedVc, loadingVc)
         
         XCTAssertEqual(navigator.openCallCount, 0)
-        XCTAssertEqual(navigator.puchCallCount, 0)
+        XCTAssertEqual(navigator.pushCallCount, 0)
         XCTAssertEqual(navigator.backCallCount, 0)
+        XCTAssertEqual(navigator.removeLastContentScreenCallCount, 0)
     }
     
     func testOpenContentScreenInvokesSetContent() {
         sut.openContentScreen()
-        XCTAssertEqual(screenSwitcher.setContentCallCount, 1)
-        XCTAssertEqual(screenSwitcher.setViewController, contentVc)
+        XCTAssertEqual(navigator.addContentScreenCallCount, 1)
+        XCTAssertEqual(navigator.addedVc, contentVc)
         
         XCTAssertEqual(navigator.openCallCount, 0)
-        XCTAssertEqual(navigator.puchCallCount, 0)
+        XCTAssertEqual(navigator.pushCallCount, 0)
         XCTAssertEqual(navigator.backCallCount, 0)
+        XCTAssertEqual(navigator.removeLastContentScreenCallCount, 0)
     }
     
     func testOpenLoginScreenInvokesNavigatorOpen() {
         sut.openLoginScreen()
         XCTAssertEqual(navigator.openCallCount, 1)
-        XCTAssertEqual(navigator.openedVc, loginVC)
+        XCTAssertEqual(navigator.opennedVc, loginVC)
         XCTAssertEqual(navigator.openAnimatedFlag, true)
         
-        XCTAssertEqual(navigator.puchCallCount, 0)
+        XCTAssertEqual(navigator.pushCallCount, 0)
         XCTAssertEqual(navigator.backCallCount, 0)
-        XCTAssertEqual(screenSwitcher.setContentCallCount, 0)
+        XCTAssertEqual(navigator.addContentScreenCallCount, 0)
+        XCTAssertEqual(navigator.removeLastContentScreenCallCount, 0)
     }
-}
-extension MainRouterTests {
-    class ContainerScreenSwitcherSpy: ContainerScreenSwitcher {
-        var setContentCallCount = 0
-        var setViewController: UIViewController?
-        func set(content viewController: UIViewController) {
-            setContentCallCount += 1
-            setViewController = viewController
-        }
+    
+    func testOpenLoadingSecondTimeInvokesRemoveContent() {
+        sut.openLoadingScreen()
+        sut.openLoadingScreen()
+        XCTAssertEqual(navigator.removeLastContentScreenCallCount, 1)
+        XCTAssertEqual(navigator.addContentScreenCallCount, 2)
     }
-    class ErrorHandlingNavigatorSpy: ErrorHandlingNavigator {
-        var openCallCount = 0
-        var openedVc: UIViewController?
-        var openAnimatedFlag: Bool?
-        func open(viewController: UIViewController, animated: Bool) {
-            openCallCount += 1
-            openedVc = viewController
-            openAnimatedFlag = animated
+    
+    func testOpenLoadingSecondTimeInvokesRemoveContentBeforeAdding() {
+        sut.openLoadingScreen()
+        navigator.removeLastContentInterceptionCallback = {[unowned self] in
+            XCTAssertEqual(self.navigator.addContentScreenCallCount, 1)
         }
-        
-        var puchCallCount = 0
-        var pushedVc: UIViewController?
-        var pushAnimatedFlag: Bool?
-        func push(viewController: UIViewController, animated: Bool) {
-            puchCallCount += 1
-            pushedVc = viewController
-            pushAnimatedFlag = animated
+        sut.openLoadingScreen()
+    }
+    
+    func testOpenContentScreenSecondTimeInvokesRemoveContent() {
+        sut.openContentScreen()
+        sut.openContentScreen()
+        XCTAssertEqual(navigator.removeLastContentScreenCallCount, 1)
+        XCTAssertEqual(navigator.addContentScreenCallCount, 2)
+    }
+    
+    func testOpenContentScreenSecondTimeInvokesRemoveContentBeforeAdding() {
+        sut.openContentScreen()
+        navigator.removeLastContentInterceptionCallback = {[unowned self] in
+            XCTAssertEqual(self.navigator.addContentScreenCallCount, 1)
         }
-        
-        var backCallCount = 0
-        var backAnimatedFlag: Bool?
-        func back(animated: Bool) {
-            backCallCount += 1
-            backAnimatedFlag = animated
-        }
+        sut.openContentScreen()
+    }
+    
+    func testOpenContentThenOpenLoadingScreenInvokesremoveContent() {
+        sut.openContentScreen()
+        sut.openLoadingScreen()
+        XCTAssertEqual(navigator.removeLastContentScreenCallCount, 1)
+        XCTAssertEqual(navigator.addContentScreenCallCount, 2)
+    }
+    
+    func testOpenLoadingThenOpenContentScreenInvokesremoveContent() {
+        sut.openLoadingScreen()
+        sut.openContentScreen()
+        XCTAssertEqual(navigator.removeLastContentScreenCallCount, 1)
+        XCTAssertEqual(navigator.addContentScreenCallCount, 2)
+    }
+    
+    func testOpenLoginScreenThenOpenContentScreenDoesNotInvokesRemove() {
+        sut.openLoginScreen()
+        sut.openContentScreen()
+        XCTAssertEqual(navigator.removeLastContentScreenCallCount, 0)
     }
 }

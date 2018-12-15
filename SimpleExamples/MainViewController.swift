@@ -1,9 +1,6 @@
 import UIKit
 import Core
 
-protocol MainScreenSwitcher: ContainerScreenSwitcher {}
-extension ContainerViewController: MainScreenSwitcher {}
-
 class MainViewController: UIViewController {
     
     private var eventHandler: MainViewEventHandler!
@@ -13,8 +10,10 @@ class MainViewController: UIViewController {
         registerDependencies()
     }
     private func registerDependencies() {
-        DependencyContainer.register(Navigator.self, {NavigatorImpl(self)})
         DependencyConfigurator.register()
+        DependencyContainer.register(AggregatedNavigator.self, {
+            ContentScreenNavigatorImpl(self, DependencyContainer.resolve(NavigatorFactory.self))
+        })
     }
     
     override func viewDidLoad() {
@@ -23,10 +22,6 @@ class MainViewController: UIViewController {
         eventHandler.onLoad()
     }
     private func resolveDependencies() {
-        DependencyContainer.register(MainScreenSwitcher.self, {self.containerVc})
         eventHandler = DependencyContainer.resolve(MainViewEventHandler.self)
-    }
-    private var containerVc: MainScreenSwitcher {
-        return children.filter({$0 is ContainerViewController}).first as! ContainerViewController
     }
 }

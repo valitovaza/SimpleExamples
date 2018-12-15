@@ -4,17 +4,16 @@ import UIKit
 typealias ViewControllerFactory = () -> (UIViewController)
 
 class MainRouter {
-    private let screenSwitcher: ContainerScreenSwitcher
+    private var isContentAdded = false
+    
     private let navigator: ErrorHandlingNavigator
     private let loadingFactory: ViewControllerFactory
     private let contentFactory: ViewControllerFactory
     private let loginFactory: ViewControllerFactory
-    init(_ screenSwitcher: ContainerScreenSwitcher,
-         _ navigator: ErrorHandlingNavigator,
+    init(_ navigator: ErrorHandlingNavigator,
          _ loadingFactory: @escaping ViewControllerFactory,
          _ contentFactory: @escaping ViewControllerFactory,
          _ loginFactory: @escaping ViewControllerFactory) {
-        self.screenSwitcher = screenSwitcher
         self.navigator = navigator
         self.loadingFactory = loadingFactory
         self.contentFactory = contentFactory
@@ -23,11 +22,22 @@ class MainRouter {
 }
 extension MainRouter: LoginCheckerRouter {
     func openLoadingScreen() {
-        screenSwitcher.set(content: loadingFactory())
+        removeContentScreenOptionally()
+        navigator.add(contentScreen: loadingFactory())
+        markContentAdded()
     }
-    
+    private func removeContentScreenOptionally() {
+        if isContentAdded {
+            navigator.removeLastContentScreen()
+        }
+    }
+    private func markContentAdded() {
+        isContentAdded = true
+    }
     func openContentScreen() {
-        screenSwitcher.set(content: contentFactory())
+        removeContentScreenOptionally()
+        navigator.add(contentScreen: contentFactory())
+        markContentAdded()
     }
     
     func openLoginScreen() {

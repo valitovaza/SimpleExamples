@@ -43,5 +43,6 @@ final class Dependencies {
         MainDependenciesRegistrator.registerDependencies()
         CommonDependenciesRegistrator.registerDependencies()
         CounterDependenciesRegistrator.registerDependencies()
+        ContentDependenciesRegistrator.registerDependencies()
     }
 }
