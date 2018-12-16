@@ -1,7 +1,9 @@
 import XCTest
 @testable import SimpleExamples
 
-class NavigatorMock: Navigator, ContentScreenNavigator {
+class NavigatorMock: Navigator, ContentScreenNavigator, ManualBackHandler {
+    
+    // MARK: - Navigator
     
     var nextErrors: [NavigatorError] = []
     
@@ -38,6 +40,8 @@ class NavigatorMock: Navigator, ContentScreenNavigator {
         backAnimatedFlag = animated
     }
     
+    // MARK: - ContentScreenNavigator
+    
     var addContentScreenCallCount = 0
     var addedVc: UIViewController?
     func add(contentScreen viewController: UIViewController) throws {
@@ -50,5 +54,13 @@ class NavigatorMock: Navigator, ContentScreenNavigator {
     func removeLastContentScreen() throws {
         try checkThrowableError()
         removeLastContentScreenCallCount += 1
+    }
+    
+    // MARK: - ManualBackHandler
+    
+    var removeLastPresentedViewControllerCallCount = 0
+    func removeLastPresentedViewController() throws {
+        try checkThrowableError()
+        removeLastPresentedViewControllerCallCount += 1
     }
 }

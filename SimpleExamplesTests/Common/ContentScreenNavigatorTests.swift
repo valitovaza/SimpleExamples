@@ -4,13 +4,13 @@ import XCTest
 class ContentScreenNavigatorTests: XCTestCase {
 
     private var sut: ContentScreenNavigatorImpl!
-    private var navigatorFactory: NavigatorFactorySpy!
+    private var navigatorFactory: ManualBackNavigatorFactorySpy!
     private var initialNavigator: NavigatorMock!
     
     private let initialVc = ContentChildControllerMock()
     
     override func setUp() {
-        navigatorFactory = NavigatorFactorySpy()
+        navigatorFactory = ManualBackNavigatorFactorySpy()
         sut = ContentScreenNavigatorImpl(initialVc, navigatorFactory)
         initialNavigator = navigatorFactory.createdNavigators.first!
     }
@@ -346,23 +346,41 @@ class ContentScreenNavigatorTests: XCTestCase {
         
         XCTAssertNil(weakVc)
     }
-}
-extension ContentScreenNavigatorTests {
-    class NavigatorFactorySpy: NavigatorFactory {
-        var createCallCount = 0
-        var createVc: UIViewController?
-        var createdNavigators: [NavigatorMock] = []
-        func create(_ viewController: UIViewController) -> Navigator {
-            createCallCount += 1
-            createVc = viewController
-            let navigator = NavigatorMock()
-            createdNavigators.append(navigator)
-            return navigator
-        }
-        var currentNavigator: NavigatorMock {
-            return createdNavigators.last!
+    
+    func testRemoveLastPresentedInvokesNavigatorsRemoveLastPresented() {
+        try? sut.removeLastPresentedViewController()
+        XCTAssertEqual(initialNavigator.removeLastPresentedViewControllerCallCount, 1)
+    }
+    
+    func testRemoveLastPresentedWithErrorThrowsAnError() {
+        initialNavigator.nextErrors = [.cantNavigateBack]
+        XCTAssertThrowsError(try sut.removeLastPresentedViewController())
+        { (error) in
+            XCTAssertEqual(error as? NavigatorError,
+                           NavigatorError.cantNavigateBack)
         }
     }
+    
+    func testRemoveLastPresentedChangesTopViewController() {
+        let pushedVc = ContentChildControllerMock()
+        try? sut.push(viewController: pushedVc, animated: false)
+        try? sut.removeLastPresentedViewController()
+        try? sut.add(contentScreen: UIViewController())
+        XCTAssertEqual(initialVc.addContentChildCallCount, 1)
+        XCTAssertEqual(pushedVc.addContentChildCallCount, 0)
+    }
+    
+    func testRemoveLastWithErrorMustNotAffectTopViewController() {
+        let pushedVc = ContentChildControllerMock()
+        try? sut.push(viewController: pushedVc, animated: false)
+        initialNavigator.nextErrors = [.cantNavigateBack]
+        try? sut.removeLastPresentedViewController()
+        try? sut.add(contentScreen: UIViewController())
+        XCTAssertEqual(pushedVc.addContentChildCallCount, 1)
+        XCTAssertEqual(initialVc.addContentChildCallCount, 0)
+    }
+}
+extension ContentScreenNavigatorTests {
     class ContentChildControllerMock: UIViewController {
         var addContentChildCallCount = 0
         var addedVc: UIViewController?

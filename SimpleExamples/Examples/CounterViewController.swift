@@ -10,9 +10,18 @@ class CounterViewController: UIViewController {
         resolveDependencies()
         eventHandler.onDidLoad()
     }
-    private func resolveDependencies() {
+    
+    override func resolveDependencies() {
         DependencyContainer.register(CounterView.self, { self })
         eventHandler = DependencyContainer.resolve(CounterViewEventHandler.self)
+    }
+    
+    override func releaseDependencies() {
+        DependencyContainer.release(CounterView.self)
+    }
+    
+    deinit {
+        print("CounterViewController: deinit")
     }
     
     @IBOutlet weak var countLabel: UILabel!

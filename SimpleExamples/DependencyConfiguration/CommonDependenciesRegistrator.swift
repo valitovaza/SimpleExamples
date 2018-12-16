@@ -8,10 +8,15 @@ enum CommonDependenciesRegistrator {
         })
         
         //NavigatorFactory
-        DependencyContainer.register(NavigatorFactory.self, {
+        DependencyContainer.register(NavigatorFactoryImpl.self, {
             Dependencies.createSingleWeak(NavigatorFactoryImpl.self, {
                 NavigatorFactoryImpl()
             })
+        })
+        
+        //AggregatedManualNavigatorFactory
+        DependencyContainer.register(AggregatedManualNavigatorFactory.self, {
+            ContentScreenNavigatorFactoryImpl(DependencyContainer.resolve(NavigatorFactoryImpl.self))
         })
         
         //ErrorHandlingNavigator

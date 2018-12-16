@@ -1,7 +1,7 @@
 import XCTest
 @testable import SimpleExamples
 
-class NavigatorFactoryTests: XCTestCase {
+class ManualBackNavigatorFactoryTests: XCTestCase {
 
     private var sut: NavigatorFactoryImpl!
     

@@ -7,7 +7,7 @@ class ContentViewController: UIViewController {
         super.viewDidLoad()
         resolveDependencies()
     }
-    private func resolveDependencies() {
+    override func resolveDependencies() {
         eventHandler = DependencyContainer.resolve(ContentViewEventHandler.self)
     }
     @IBAction func counterAction(_ sender: Any) {

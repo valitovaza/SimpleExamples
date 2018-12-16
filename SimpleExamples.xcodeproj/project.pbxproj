@@ -14,6 +14,12 @@
 		560AD29321AB0CF300C19CA1 /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD29221AB0CF300C19CA1 /* NavigatorTests.swift */; };
 		560AD29521AB0D2E00C19CA1 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD29421AB0D2E00C19CA1 /* Navigator.swift */; };
 		560D3D5B21A719E900694B3F /* CounterViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560D3D5A21A719E900694B3F /* CounterViewSpy.swift */; };
+		561FE77F21C5F42800D01541 /* AggregatedManualNavigatorFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE77E21C5F42800D01541 /* AggregatedManualNavigatorFactoryTests.swift */; };
+		561FE78121C5F46900D01541 /* AggregatedManualNavigatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE78021C5F46900D01541 /* AggregatedManualNavigatorFactory.swift */; };
+		561FE78321C61EF200D01541 /* ManualBackNavigatorFactorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE78221C61EF200D01541 /* ManualBackNavigatorFactorySpy.swift */; };
+		561FE78521C6424C00D01541 /* ViewControllerDependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE78421C6424B00D01541 /* ViewControllerDependencyManager.swift */; };
+		561FE78721C644DE00D01541 /* CocoaNavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE78621C644DE00D01541 /* CocoaNavigatorTests.swift */; };
+		561FE78921C6452500D01541 /* CocoaNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FE78821C6452500D01541 /* CocoaNavigator.swift */; };
 		5627942C21BE771100EB9D76 /* ContentChildParentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627942B21BE771100EB9D76 /* ContentChildParentTests.swift */; };
 		5627942E21BE775400EB9D76 /* ContentChildParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627942D21BE775400EB9D76 /* ContentChildParent.swift */; };
 		5627943721BE843A00EB9D76 /* MainRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627943621BE843A00EB9D76 /* MainRouterTests.swift */; };
@@ -78,9 +84,12 @@
 		56C1BB7521A5EA7200B5B529 /* ContentFetchAdapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB7421A5EA7200B5B529 /* ContentFetchAdapters.swift */; };
 		56C1BB7621A5EA7200B5B529 /* ContentFetchAdapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB7421A5EA7200B5B529 /* ContentFetchAdapters.swift */; };
 		56CAE30321C3DA3B00E064A4 /* NavigatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE30221C3DA3B00E064A4 /* NavigatorMock.swift */; };
-		56CAE30521C4CDE400E064A4 /* NavigatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE30421C4CDE400E064A4 /* NavigatorFactory.swift */; };
-		56CAE30721C4CE2600E064A4 /* NavigatorFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE30621C4CE2600E064A4 /* NavigatorFactoryTests.swift */; };
+		56CAE30521C4CDE400E064A4 /* ManualBackNavigatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE30421C4CDE400E064A4 /* ManualBackNavigatorFactory.swift */; };
+		56CAE30721C4CE2600E064A4 /* ManualBackNavigatorFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE30621C4CE2600E064A4 /* ManualBackNavigatorFactoryTests.swift */; };
 		56CAE30921C4D0A700E064A4 /* ViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE30821C4D0A700E064A4 /* ViewControllerMock.swift */; };
+		56CAE30D21C4E99D00E064A4 /* BackButtonHandlingNavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE30C21C4E99D00E064A4 /* BackButtonHandlingNavigatorTests.swift */; };
+		56CAE30F21C4E9CC00E064A4 /* BackButtonHandlingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE30E21C4E9CC00E064A4 /* BackButtonHandlingNavigator.swift */; };
+		56CAE31121C5446A00E064A4 /* NavigationViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE31021C5446A00E064A4 /* NavigationViewControllerMock.swift */; };
 		56F5F24221A8526C00EECE2F /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5F24121A8526C00EECE2F /* WeakBox.swift */; };
 		56F5F24421A85FC100EECE2F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5F24321A85FC100EECE2F /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -125,6 +134,12 @@
 		560AD29221AB0CF300C19CA1 /* NavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTests.swift; sourceTree = "<group>"; };
 		560AD29421AB0D2E00C19CA1 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		560D3D5A21A719E900694B3F /* CounterViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewSpy.swift; sourceTree = "<group>"; };
+		561FE77E21C5F42800D01541 /* AggregatedManualNavigatorFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregatedManualNavigatorFactoryTests.swift; sourceTree = "<group>"; };
+		561FE78021C5F46900D01541 /* AggregatedManualNavigatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregatedManualNavigatorFactory.swift; sourceTree = "<group>"; };
+		561FE78221C61EF200D01541 /* ManualBackNavigatorFactorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualBackNavigatorFactorySpy.swift; sourceTree = "<group>"; };
+		561FE78421C6424B00D01541 /* ViewControllerDependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDependencyManager.swift; sourceTree = "<group>"; };
+		561FE78621C644DE00D01541 /* CocoaNavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaNavigatorTests.swift; sourceTree = "<group>"; };
+		561FE78821C6452500D01541 /* CocoaNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaNavigator.swift; sourceTree = "<group>"; };
 		5627942B21BE771100EB9D76 /* ContentChildParentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentChildParentTests.swift; sourceTree = "<group>"; };
 		5627942D21BE775400EB9D76 /* ContentChildParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentChildParent.swift; sourceTree = "<group>"; };
 		5627943621BE843A00EB9D76 /* MainRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouterTests.swift; sourceTree = "<group>"; };
@@ -183,9 +198,12 @@
 		56C1BB7221A5E79E00B5B529 /* ContentFetchAdaptersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentFetchAdaptersTests.swift; sourceTree = "<group>"; };
 		56C1BB7421A5EA7200B5B529 /* ContentFetchAdapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentFetchAdapters.swift; sourceTree = "<group>"; };
 		56CAE30221C3DA3B00E064A4 /* NavigatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorMock.swift; sourceTree = "<group>"; };
-		56CAE30421C4CDE400E064A4 /* NavigatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorFactory.swift; sourceTree = "<group>"; };
-		56CAE30621C4CE2600E064A4 /* NavigatorFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorFactoryTests.swift; sourceTree = "<group>"; };
+		56CAE30421C4CDE400E064A4 /* ManualBackNavigatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualBackNavigatorFactory.swift; sourceTree = "<group>"; };
+		56CAE30621C4CE2600E064A4 /* ManualBackNavigatorFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualBackNavigatorFactoryTests.swift; sourceTree = "<group>"; };
 		56CAE30821C4D0A700E064A4 /* ViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMock.swift; sourceTree = "<group>"; };
+		56CAE30C21C4E99D00E064A4 /* BackButtonHandlingNavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonHandlingNavigatorTests.swift; sourceTree = "<group>"; };
+		56CAE30E21C4E9CC00E064A4 /* BackButtonHandlingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonHandlingNavigator.swift; sourceTree = "<group>"; };
+		56CAE31021C5446A00E064A4 /* NavigationViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewControllerMock.swift; sourceTree = "<group>"; };
 		56F5F24121A8526C00EECE2F /* WeakBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
 		56F5F24321A85FC100EECE2F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -268,9 +286,11 @@
 		560AD28721AB0C6700C19CA1 /* SimpleExamplesTests */ = {
 			isa = PBXGroup;
 			children = (
-				56281A3F21C1201500BC0DE9 /* ErrorHandlingNavigatorSpy.swift */,
 				56CAE30221C3DA3B00E064A4 /* NavigatorMock.swift */,
+				56281A3F21C1201500BC0DE9 /* ErrorHandlingNavigatorSpy.swift */,
 				56CAE30821C4D0A700E064A4 /* ViewControllerMock.swift */,
+				56CAE31021C5446A00E064A4 /* NavigationViewControllerMock.swift */,
+				561FE78221C61EF200D01541 /* ManualBackNavigatorFactorySpy.swift */,
 				560AD29021AB0C7D00C19CA1 /* Common */,
 				56281A3A21C11ED900BC0DE9 /* Examples */,
 				5627943621BE843A00EB9D76 /* MainRouterTests.swift */,
@@ -283,9 +303,12 @@
 			isa = PBXGroup;
 			children = (
 				560AD29221AB0CF300C19CA1 /* NavigatorTests.swift */,
-				56CAE30621C4CE2600E064A4 /* NavigatorFactoryTests.swift */,
+				56CAE30621C4CE2600E064A4 /* ManualBackNavigatorFactoryTests.swift */,
 				56281A4721C2382A00BC0DE9 /* ContentScreenNavigatorTests.swift */,
+				561FE77E21C5F42800D01541 /* AggregatedManualNavigatorFactoryTests.swift */,
+				56CAE30C21C4E99D00E064A4 /* BackButtonHandlingNavigatorTests.swift */,
 				56281A2D21BFFA6F00BC0DE9 /* ErrorHandlingNavigatorTests.swift */,
+				561FE78621C644DE00D01541 /* CocoaNavigatorTests.swift */,
 				5627942B21BE771100EB9D76 /* ContentChildParentTests.swift */,
 			);
 			path = Common;
@@ -295,9 +318,12 @@
 			isa = PBXGroup;
 			children = (
 				560AD29421AB0D2E00C19CA1 /* Navigator.swift */,
-				56CAE30421C4CDE400E064A4 /* NavigatorFactory.swift */,
+				56CAE30421C4CDE400E064A4 /* ManualBackNavigatorFactory.swift */,
 				56281A4521C2224B00BC0DE9 /* ContentScreenNavigator.swift */,
+				561FE78021C5F46900D01541 /* AggregatedManualNavigatorFactory.swift */,
+				56CAE30E21C4E9CC00E064A4 /* BackButtonHandlingNavigator.swift */,
 				56281A2F21BFFAA800BC0DE9 /* ErrorHandlingNavigator.swift */,
+				561FE78821C6452500D01541 /* CocoaNavigator.swift */,
 				56281A3121BFFB6100BC0DE9 /* Loggers.swift */,
 				5627942D21BE775400EB9D76 /* ContentChildParent.swift */,
 				5627944121BE928D00EB9D76 /* VCStoryboardInitializer.swift */,
@@ -413,6 +439,7 @@
 				56281A4121C129A200BC0DE9 /* ContentDependenciesRegistrator.swift */,
 				560AD28021AB035400C19CA1 /* Stubs.swift */,
 				56F5F24321A85FC100EECE2F /* Constants.swift */,
+				561FE78421C6424B00D01541 /* ViewControllerDependencyManager.swift */,
 			);
 			path = DependencyConfiguration;
 			sourceTree = "<group>";
@@ -649,15 +676,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561FE78321C61EF200D01541 /* ManualBackNavigatorFactorySpy.swift in Sources */,
 				56281A4021C1201500BC0DE9 /* ErrorHandlingNavigatorSpy.swift in Sources */,
 				56281A3C21C11EEF00BC0DE9 /* ContentViewRouterTests.swift in Sources */,
+				561FE78721C644DE00D01541 /* CocoaNavigatorTests.swift in Sources */,
+				56CAE31121C5446A00E064A4 /* NavigationViewControllerMock.swift in Sources */,
 				5627943721BE843A00EB9D76 /* MainRouterTests.swift in Sources */,
 				56CAE30321C3DA3B00E064A4 /* NavigatorMock.swift in Sources */,
-				56CAE30721C4CE2600E064A4 /* NavigatorFactoryTests.swift in Sources */,
+				56CAE30721C4CE2600E064A4 /* ManualBackNavigatorFactoryTests.swift in Sources */,
 				5627942C21BE771100EB9D76 /* ContentChildParentTests.swift in Sources */,
 				56281A4821C2382A00BC0DE9 /* ContentScreenNavigatorTests.swift in Sources */,
 				560AD29321AB0CF300C19CA1 /* NavigatorTests.swift in Sources */,
 				56CAE30921C4D0A700E064A4 /* ViewControllerMock.swift in Sources */,
+				561FE77F21C5F42800D01541 /* AggregatedManualNavigatorFactoryTests.swift in Sources */,
+				56CAE30D21C4E99D00E064A4 /* BackButtonHandlingNavigatorTests.swift in Sources */,
 				56281A2E21BFFA6F00BC0DE9 /* ErrorHandlingNavigatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,14 +703,18 @@
 				56281A2A21BFF85300BC0DE9 /* CommonDependenciesRegistrator.swift in Sources */,
 				560AD29521AB0D2E00C19CA1 /* Navigator.swift in Sources */,
 				56281A2521BFB26200BC0DE9 /* LoadingViewController.swift in Sources */,
-				56CAE30521C4CDE400E064A4 /* NavigatorFactory.swift in Sources */,
+				561FE78521C6424C00D01541 /* ViewControllerDependencyManager.swift in Sources */,
+				56CAE30521C4CDE400E064A4 /* ManualBackNavigatorFactory.swift in Sources */,
+				561FE78921C6452500D01541 /* CocoaNavigator.swift in Sources */,
 				56281A4621C2224B00BC0DE9 /* ContentScreenNavigator.swift in Sources */,
 				56C1BB2221A5956F00B5B529 /* DependencyConfigurator.swift in Sources */,
 				56281A3221BFFB6100BC0DE9 /* Loggers.swift in Sources */,
+				561FE78121C5F46900D01541 /* AggregatedManualNavigatorFactory.swift in Sources */,
 				5627942E21BE775400EB9D76 /* ContentChildParent.swift in Sources */,
 				56C1BB2121A5956F00B5B529 /* Dependencies.swift in Sources */,
 				56281A2C21BFF8A500BC0DE9 /* CounterDependenciesRegistrator.swift in Sources */,
 				56281A3021BFFAA800BC0DE9 /* ErrorHandlingNavigator.swift in Sources */,
+				56CAE30F21C4E9CC00E064A4 /* BackButtonHandlingNavigator.swift in Sources */,
 				5627944221BE928D00EB9D76 /* VCStoryboardInitializer.swift in Sources */,
 				5627943921BE84AC00EB9D76 /* MainRouter.swift in Sources */,
 				56281A3E21C11F4800BC0DE9 /* ContentViewRouter.swift in Sources */,

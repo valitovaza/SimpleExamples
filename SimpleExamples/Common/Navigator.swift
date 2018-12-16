@@ -93,3 +93,11 @@ extension NavigatorImpl: Navigator {
         }
     }
 }
+extension NavigatorImpl: ManualBackHandler {
+    func removeLastPresentedViewController() throws {
+        guard presentedInfoArray.count > 1 else {
+            throw NavigatorError.cantNavigateBack
+        }
+        presentedInfoArray.removeLast()
+    }
+}

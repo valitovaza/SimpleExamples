@@ -12,7 +12,8 @@ class MainViewController: UIViewController {
     private func registerDependencies() {
         DependencyConfigurator.register()
         DependencyContainer.register(AggregatedNavigator.self, {
-            ContentScreenNavigatorImpl(self, DependencyContainer.resolve(NavigatorFactory.self))
+            let factory = DependencyContainer.resolve(AggregatedManualNavigatorFactory.self)
+            return BackButtonHandlingNavigator(factory, self)
         })
     }
     
@@ -21,7 +22,7 @@ class MainViewController: UIViewController {
         resolveDependencies()
         eventHandler.onLoad()
     }
-    private func resolveDependencies() {
+    override func resolveDependencies() {
         eventHandler = DependencyContainer.resolve(MainViewEventHandler.self)
     }
 }

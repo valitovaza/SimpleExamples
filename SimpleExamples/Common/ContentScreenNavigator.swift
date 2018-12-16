@@ -4,17 +4,19 @@ protocol ContentScreenNavigator {
     func add(contentScreen viewController: UIViewController) throws
     func removeLastContentScreen() throws
 }
+typealias ManualBackNavigator = Navigator & ManualBackHandler
+
 class ContentScreenNavigatorImpl {
     private var presentedViewControllers: [[UIViewController]] = []
-    private var navigators: [Navigator] = []
-    private let navigatorFactory: NavigatorFactory
+    private var navigators: [ManualBackNavigator] = []
+    private let navigatorFactory: ManualBackNavigatorFactory
     init(_ initialVc: UIViewController,
-         _ navigatorFactory: NavigatorFactory) {
+         _ navigatorFactory: ManualBackNavigatorFactory) {
         self.presentedViewControllers.append([initialVc])
         self.navigators.append(navigatorFactory.create(initialVc))
         self.navigatorFactory = navigatorFactory
     }
-    private var currentNavigator: Navigator {
+    private var currentNavigator: ManualBackNavigator {
         return navigators.last!
     }
 }
@@ -86,5 +88,11 @@ extension ContentScreenNavigatorImpl: Navigator {
         var lastArray = presentedViewControllers.last!
         lastArray.removeLast()
         changeLastArray(lastArray)
+    }
+}
+extension ContentScreenNavigatorImpl: ManualBackHandler {
+    func removeLastPresentedViewController() throws {
+        try currentNavigator.removeLastPresentedViewController()
+        removeLastViewController()
     }
 }

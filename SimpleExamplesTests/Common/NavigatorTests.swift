@@ -324,42 +324,38 @@ class NavigatorTests: XCTestCase {
             XCTAssertEqual(error as? NavigatorError, NavigatorError.cantNavigateBack)
         }
     }
-}
-extension NavigatorTests {
-    class NavigationViewControllerMock: UINavigationController {
-        var pushViewControllerCallCount = 0
-        var pushAnimationFlag: Bool?
-        var pushedViewController: UIViewController?
-        override func pushViewController(_ viewController: UIViewController,
-                                         animated: Bool) {
-            pushAnimationFlag = animated
-            pushedViewController = viewController
-            pushViewControllerCallCount += 1
+    
+    func testRemoveLastOpenedVCAllowsPresentingRemovedVc() {
+        let vc = UIViewController()
+        try? navSut.open(viewController: vc, animated: false)
+        try? navSut.removeLastPresentedViewController()
+        XCTAssertNoThrow(try navSut.push(viewController: vc, animated: true))
+    }
+    
+    func testOpen_RemoveLast_BackThrowsAnError() {
+        let vc = UIViewController()
+        try? sut.open(viewController: vc, animated: false)
+        try? sut.removeLastPresentedViewController()
+        XCTAssertThrowsError(try sut.back(animated: false))
+        { (error) in
+            XCTAssertEqual(error as? NavigatorError, NavigatorError.cantNavigateBack)
         }
-        
-        var popViewControllerCallCount = 0
-        var popAnimationFlag: Bool?
-        override func popViewController(animated: Bool) -> UIViewController? {
-            popAnimationFlag = animated
-            popViewControllerCallCount += 1
-            return nil
-        }
-        
-        var presentCallCount = 0
-        override func present(_ viewControllerToPresent: UIViewController,
-                              animated flag: Bool,
-                              completion: (() -> Void)? = nil) {
-            presentCallCount += 1
-        }
-        
-        var dismissCallCount = 0
-        var dismissAnimatedFlag: Bool?
-        var dismissCompletion: (() -> Void)?
-        override func dismiss(animated flag: Bool,
-                              completion: (() -> Void)? = nil) {
-            dismissCallCount += 1
-            dismissAnimatedFlag = flag
-            dismissCompletion = completion
+    }
+    
+    func testOpen_Push_RemoveLastPresented_OpenInvokesPresentOnFirstOpenedVc() {
+        let nav = NavigationViewControllerMock()
+        try? sut.open(viewController: nav, animated: false)
+        try? sut.push(viewController: UIViewController(), animated: true)
+        try? sut.removeLastPresentedViewController()
+        try? sut.open(viewController: UIViewController(), animated: false)
+        XCTAssertEqual(nav.presentCallCount, 1)
+    }
+    
+    func testRemoveLastPresentedWithNoPresentedVControllersThrowsAnError() {
+        XCTAssertThrowsError(try sut.removeLastPresentedViewController())
+        { (error) in
+            XCTAssertEqual(error as? NavigatorError,
+                           NavigatorError.cantNavigateBack)
         }
     }
 }
