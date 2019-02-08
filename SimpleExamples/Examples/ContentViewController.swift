@@ -5,9 +5,9 @@ class ContentViewController: UIViewController {
     private var eventHandler: ContentViewEventHandler!
     override func viewDidLoad() {
         super.viewDidLoad()
-        resolveDependencies()
+        registerDependencies()
     }
-    override func resolveDependencies() {
+    override func registerDependencies() {
         eventHandler = DependencyContainer.resolve(ContentViewEventHandler.self)
     }
     @IBAction func counterAction(_ sender: Any) {

@@ -2,7 +2,7 @@ public protocol Counter {
     func increment()
     func decrement() throws
 }
-enum CounterError: Error {
+public enum CounterError: Error {
     case cantDecrementZero
 }
 public class CounterImpl {

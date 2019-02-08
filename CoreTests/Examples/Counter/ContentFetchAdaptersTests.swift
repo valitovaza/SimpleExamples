@@ -1,4 +1,5 @@
 import XCTest
+import Core
 
 class ContentFetchAdaptersTests: XCTestCase {
     func testGetContentFromCounterRepositoryReturnValue() {

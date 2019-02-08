@@ -1,10 +1,10 @@
 import UIKit
 
 protocol ViewControllerDependencyManager {
-    func resolveDependencies()
+    func registerDependencies()
     func releaseDependencies()
 }
 extension UIViewController: ViewControllerDependencyManager {
-    @objc func resolveDependencies() {}
+    @objc func registerDependencies() {}
     @objc func releaseDependencies() {}
 }

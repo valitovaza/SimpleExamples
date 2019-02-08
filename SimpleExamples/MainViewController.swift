@@ -7,9 +7,9 @@ class MainViewController: UIViewController {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        registerDependencies()
+        createInitialDependencies()
     }
-    private func registerDependencies() {
+    private func createInitialDependencies() {
         DependencyConfigurator.register()
         DependencyContainer.register(AggregatedNavigator.self, {
             let factory = DependencyContainer.resolve(AggregatedManualNavigatorFactory.self)
@@ -19,10 +19,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resolveDependencies()
+        registerDependencies()
         eventHandler.onLoad()
     }
-    override func resolveDependencies() {
+    override func registerDependencies() {
         eventHandler = DependencyContainer.resolve(MainViewEventHandler.self)
     }
 }

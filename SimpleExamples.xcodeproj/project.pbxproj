@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		560AD27B21AAFE2F00C19CA1 /* LoginCheckerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD27A21AAFE2F00C19CA1 /* LoginCheckerPresenterTests.swift */; };
 		560AD27E21AAFE7000C19CA1 /* LoginCheckerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD27D21AAFE7000C19CA1 /* LoginCheckerPresenter.swift */; };
-		560AD27F21AAFE7000C19CA1 /* LoginCheckerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD27D21AAFE7000C19CA1 /* LoginCheckerPresenter.swift */; };
 		560AD28121AB035400C19CA1 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD28021AB035400C19CA1 /* Stubs.swift */; };
 		560AD29321AB0CF300C19CA1 /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD29221AB0CF300C19CA1 /* NavigatorTests.swift */; };
 		560AD29521AB0D2E00C19CA1 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AD29421AB0D2E00C19CA1 /* Navigator.swift */; };
@@ -26,7 +25,6 @@
 		5627943921BE84AC00EB9D76 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627943821BE84AC00EB9D76 /* MainRouter.swift */; };
 		5627943D21BE8F6300EB9D76 /* MainViewEventHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627943C21BE8F6300EB9D76 /* MainViewEventHandlerTests.swift */; };
 		5627943F21BE8F9C00EB9D76 /* MainViewEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627943E21BE8F9C00EB9D76 /* MainViewEventHandler.swift */; };
-		5627944021BE8F9C00EB9D76 /* MainViewEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627943E21BE8F9C00EB9D76 /* MainViewEventHandler.swift */; };
 		5627944221BE928D00EB9D76 /* VCStoryboardInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627944121BE928D00EB9D76 /* VCStoryboardInitializer.swift */; };
 		5627944421BE958400EB9D76 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5627944321BE958400EB9D76 /* Login.storyboard */; };
 		5627944621BE95AD00EB9D76 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5627944521BE95AD00EB9D76 /* LoginViewController.swift */; };
@@ -40,13 +38,13 @@
 		56281A3221BFFB6100BC0DE9 /* Loggers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A3121BFFB6100BC0DE9 /* Loggers.swift */; };
 		56281A3621C11D0600BC0DE9 /* ContentViewEventHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A3521C11D0600BC0DE9 /* ContentViewEventHandlerTests.swift */; };
 		56281A3821C11D4E00BC0DE9 /* ContentViewEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A3721C11D4E00BC0DE9 /* ContentViewEventHandler.swift */; };
-		56281A3921C11D4E00BC0DE9 /* ContentViewEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A3721C11D4E00BC0DE9 /* ContentViewEventHandler.swift */; };
 		56281A3C21C11EEF00BC0DE9 /* ContentViewRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A3B21C11EEF00BC0DE9 /* ContentViewRouterTests.swift */; };
 		56281A3E21C11F4800BC0DE9 /* ContentViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A3D21C11F4800BC0DE9 /* ContentViewRouter.swift */; };
 		56281A4021C1201500BC0DE9 /* ErrorHandlingNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A3F21C1201500BC0DE9 /* ErrorHandlingNavigatorSpy.swift */; };
 		56281A4221C129A200BC0DE9 /* ContentDependenciesRegistrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A4121C129A200BC0DE9 /* ContentDependenciesRegistrator.swift */; };
 		56281A4621C2224B00BC0DE9 /* ContentScreenNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A4521C2224B00BC0DE9 /* ContentScreenNavigator.swift */; };
 		56281A4821C2382A00BC0DE9 /* ContentScreenNavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56281A4721C2382A00BC0DE9 /* ContentScreenNavigatorTests.swift */; };
+		56A2D570220D9CF00083B7EA /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C1BB2821A595BB00B5B529 /* Core.framework */; };
 		56C1BB0921A5951100B5B529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB0821A5951100B5B529 /* AppDelegate.swift */; };
 		56C1BB0E21A5951100B5B529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56C1BB0C21A5951100B5B529 /* Main.storyboard */; };
 		56C1BB1021A5951200B5B529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C1BB0F21A5951200B5B529 /* Assets.xcassets */; };
@@ -60,29 +58,21 @@
 		56C1BB3021A595BB00B5B529 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56C1BB2821A595BB00B5B529 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		56C1BB3C21A595DC00B5B529 /* ContentFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB3B21A595DC00B5B529 /* ContentFetcherTests.swift */; };
 		56C1BB4521A5991600B5B529 /* ContentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4421A5991600B5B529 /* ContentFetcher.swift */; };
-		56C1BB4721A5999000B5B529 /* ContentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4421A5991600B5B529 /* ContentFetcher.swift */; };
 		56C1BB4A21A59B7200B5B529 /* AsyncProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4821A59B7200B5B529 /* AsyncProcessorTests.swift */; };
 		56C1BB4C21A59B8800B5B529 /* AsyncProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4B21A59B8800B5B529 /* AsyncProcessor.swift */; };
-		56C1BB4D21A59B8800B5B529 /* AsyncProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB4B21A59B8800B5B529 /* AsyncProcessor.swift */; };
 		56C1BB5121A5B53B00B5B529 /* CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5021A5B53B00B5B529 /* CounterTests.swift */; };
 		56C1BB5321A5B57900B5B529 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5221A5B57900B5B529 /* Counter.swift */; };
-		56C1BB5421A5B6A400B5B529 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5221A5B57900B5B529 /* Counter.swift */; };
 		56C1BB5621A5BCC100B5B529 /* CounterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5521A5BCC100B5B529 /* CounterPresenter.swift */; };
-		56C1BB5721A5BCC400B5B529 /* CounterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5521A5BCC100B5B529 /* CounterPresenter.swift */; };
 		56C1BB5921A5BCEC00B5B529 /* CounterPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5821A5BCEC00B5B529 /* CounterPresenterTests.swift */; };
 		56C1BB5B21A5C0D500B5B529 /* CounterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5A21A5C0D500B5B529 /* CounterRepository.swift */; };
 		56C1BB5E21A5C0EA00B5B529 /* CounterRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5D21A5C0EA00B5B529 /* CounterRepositoryTests.swift */; };
 		56C1BB6121A5C98600B5B529 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB6021A5C98600B5B529 /* CounterViewController.swift */; };
-		56C1BB6221A5CFA600B5B529 /* CounterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB5A21A5C0D500B5B529 /* CounterRepository.swift */; };
 		56C1BB6421A5D7B300B5B529 /* ErrorHandlingCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB6321A5D7B300B5B529 /* ErrorHandlingCounterTests.swift */; };
 		56C1BB6621A5D7FA00B5B529 /* ErrorHandlingCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB6521A5D7FA00B5B529 /* ErrorHandlingCounter.swift */; };
-		56C1BB6721A5D7FA00B5B529 /* ErrorHandlingCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB6521A5D7FA00B5B529 /* ErrorHandlingCounter.swift */; };
 		56C1BB6921A5E12600B5B529 /* CounterViewEventHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB6821A5E12600B5B529 /* CounterViewEventHandlerTests.swift */; };
 		56C1BB6B21A5E14C00B5B529 /* CounterViewEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB6A21A5E14C00B5B529 /* CounterViewEventHandler.swift */; };
-		56C1BB6C21A5E14C00B5B529 /* CounterViewEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB6A21A5E14C00B5B529 /* CounterViewEventHandler.swift */; };
 		56C1BB7321A5E79E00B5B529 /* ContentFetchAdaptersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB7221A5E79E00B5B529 /* ContentFetchAdaptersTests.swift */; };
 		56C1BB7521A5EA7200B5B529 /* ContentFetchAdapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB7421A5EA7200B5B529 /* ContentFetchAdapters.swift */; };
-		56C1BB7621A5EA7200B5B529 /* ContentFetchAdapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C1BB7421A5EA7200B5B529 /* ContentFetchAdapters.swift */; };
 		56CAE30321C3DA3B00E064A4 /* NavigatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE30221C3DA3B00E064A4 /* NavigatorMock.swift */; };
 		56CAE30521C4CDE400E064A4 /* ManualBackNavigatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE30421C4CDE400E064A4 /* ManualBackNavigatorFactory.swift */; };
 		56CAE30721C4CE2600E064A4 /* ManualBackNavigatorFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CAE30621C4CE2600E064A4 /* ManualBackNavigatorFactoryTests.swift */; };
@@ -235,6 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56A2D570220D9CF00083B7EA /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +389,7 @@
 				56C1BB2921A595BB00B5B529 /* Core */,
 				56C1BB3A21A595DC00B5B529 /* CoreTests */,
 				56C1BB0621A5951100B5B529 /* Products */,
+				56E8E18F220D949600564642 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -501,6 +493,13 @@
 				56281A2421BFB26200BC0DE9 /* LoadingViewController.swift */,
 			);
 			path = Examples;
+			sourceTree = "<group>";
+		};
+		56E8E18F220D949600564642 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -752,28 +751,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56C1BB4721A5999000B5B529 /* ContentFetcher.swift in Sources */,
-				56C1BB6C21A5E14C00B5B529 /* CounterViewEventHandler.swift in Sources */,
 				56C1BB5921A5BCEC00B5B529 /* CounterPresenterTests.swift in Sources */,
 				56C1BB6921A5E12600B5B529 /* CounterViewEventHandlerTests.swift in Sources */,
-				56281A3921C11D4E00BC0DE9 /* ContentViewEventHandler.swift in Sources */,
-				5627944021BE8F9C00EB9D76 /* MainViewEventHandler.swift in Sources */,
-				56C1BB4D21A59B8800B5B529 /* AsyncProcessor.swift in Sources */,
 				56281A3621C11D0600BC0DE9 /* ContentViewEventHandlerTests.swift in Sources */,
 				56C1BB7321A5E79E00B5B529 /* ContentFetchAdaptersTests.swift in Sources */,
-				56C1BB6721A5D7FA00B5B529 /* ErrorHandlingCounter.swift in Sources */,
 				56C1BB6421A5D7B300B5B529 /* ErrorHandlingCounterTests.swift in Sources */,
-				56C1BB5721A5BCC400B5B529 /* CounterPresenter.swift in Sources */,
 				56C1BB5E21A5C0EA00B5B529 /* CounterRepositoryTests.swift in Sources */,
-				56C1BB5421A5B6A400B5B529 /* Counter.swift in Sources */,
 				56C1BB4A21A59B7200B5B529 /* AsyncProcessorTests.swift in Sources */,
 				56C1BB3C21A595DC00B5B529 /* ContentFetcherTests.swift in Sources */,
-				56C1BB6221A5CFA600B5B529 /* CounterRepository.swift in Sources */,
 				560D3D5B21A719E900694B3F /* CounterViewSpy.swift in Sources */,
 				56C1BB5121A5B53B00B5B529 /* CounterTests.swift in Sources */,
-				56C1BB7621A5EA7200B5B529 /* ContentFetchAdapters.swift in Sources */,
 				5627943D21BE8F6300EB9D76 /* MainViewEventHandlerTests.swift in Sources */,
-				560AD27F21AAFE7000C19CA1 /* LoginCheckerPresenter.swift in Sources */,
 				560AD27B21AAFE2F00C19CA1 /* LoginCheckerPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1027,6 +1015,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AzamatValitov.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1057,6 +1046,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AzamatValitov.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1067,10 +1057,13 @@
 		56C1BB3F21A595DC00B5B529 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = CoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1087,10 +1080,13 @@
 		56C1BB4021A595DC00B5B529 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = CoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

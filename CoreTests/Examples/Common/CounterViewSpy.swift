@@ -1,3 +1,5 @@
+import Core
+
 class CounterViewSpy: CounterView {
     var showCallCount = 0
     var showedValue: String?

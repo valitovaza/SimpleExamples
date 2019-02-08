@@ -7,11 +7,11 @@ class CounterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resolveDependencies()
+        registerDependencies()
         eventHandler.onDidLoad()
     }
     
-    override func resolveDependencies() {
+    override func registerDependencies() {
         DependencyContainer.register(CounterView.self, { self })
         eventHandler = DependencyContainer.resolve(CounterViewEventHandler.self)
     }
