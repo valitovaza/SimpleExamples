@@ -1,5 +1,6 @@
 import UIKit
 import Core
+import HelloDependency
 
 class CounterViewController: UIViewController {
     
@@ -7,17 +8,9 @@ class CounterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerDependencies()
+        eventHandler = HelloDependency.resolve(CounterViewEventHandler.self)
         eventHandler.onDidLoad()
-    }
-    
-    override func registerDependencies() {
-        DependencyContainer.register(CounterView.self, { self })
-        eventHandler = DependencyContainer.resolve(CounterViewEventHandler.self)
-    }
-    
-    override func releaseDependencies() {
-        DependencyContainer.release(CounterView.self)
+        IOSDependencyContainer.viewControllerReady(self)
     }
     
     deinit {
