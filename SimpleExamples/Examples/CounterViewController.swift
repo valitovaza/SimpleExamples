@@ -10,7 +10,7 @@ class CounterViewController: UIViewController {
         super.viewDidLoad()
         eventHandler = HelloDependency.resolve(CounterViewEventHandler.self)
         eventHandler.onDidLoad()
-        IOSDependencyContainer.viewControllerReady(self)
+        HelloDependency.dependencyReady(self)
     }
     
     deinit {
